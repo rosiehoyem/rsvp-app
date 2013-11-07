@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Event: <%=@event.title %></strong>
+  <p>Hosted by: <%= @user.name %></p>
+</p>
+<p>
+	<%=link_to "Invite Guests!", new_event_invite_path(:event_id => @event.id) %>
+</p>
+<p>
+	<%=link_to "Show Invited Guests", event_invites_path(:event_id => @event.id) %>
+</p>
+
+<%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Back', events_path %>

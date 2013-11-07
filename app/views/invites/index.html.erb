@@ -1,0 +1,19 @@
+<p>Guests already invited to <%= @event.title %></p>
+  <% @invites.each do |invite| %>
+    <tr>
+      <td><%= invite.user.name %></td>
+      <tr> 
+      	<%= form_tag({controller: "invites", action: "update", id: invite.id}, method: "patch") do %>
+        	<%= radio_button_tag(:rsvp, "RSVP") %>
+					<%= label_tag(:rspv, "User will attend?") %>
+					<%= submit_tag %>
+				<% end %>
+		  </tr>
+  	</tr>
+  <% end %>
+
+  <p><%= link_to "Go Back to Event", event_path(@event) %>
+
+
+  
+  

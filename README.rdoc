@@ -1,0 +1,25 @@
+== README
+
+This README would normally document whatever steps are necessary to get the
+application up and running.
+
+
+Models
+users (has_many :events)
+name
+
+events (belongs_to :user)
+user_id date
+
+invites (belongs_to :user, :event)
+user_id  event_id  rsvp
+
+Routes
+
+Controllers
+
+
+Goals
+1. user can create a new event
+2. user can invite other users to their event (event show page includes select user field to invite)
+3. user can accept invite (user show page shows invites with accept check box)
